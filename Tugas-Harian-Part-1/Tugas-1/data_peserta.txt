@@ -2,5 +2,5 @@ Data Peserta Sanbercode Bootcamp ReactJS
 1. Nama: Marcelino Feihan
 2. Email: marcelino.feihan@gmail.com
 3. Sistem Operasi yang digunakan: MacOS
-4. Akun Github: feihannn 
+4. Akun Github/Gitlab: feihannn 
 5. Akun Telegram: @feihannn
