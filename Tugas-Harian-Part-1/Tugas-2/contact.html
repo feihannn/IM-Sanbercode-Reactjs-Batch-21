@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hubungi Kami</title>
+        <style>
+            h4{
+                font-weight: normal;
+                line-height: 0px;
+            }
+            label{
+                font-weight: bold;
+            }
+            input{
+                margin-left: 100px;
+            }
+            #submisi{
+                margin-left: 0px;
+            }
+            textarea{
+                margin-left: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Bagian Hubungi Kami-->
+        <h1 style="text-align: center;">Hubungi Kami</h1>
+        <h4><b>Kantor :</b>di jalan belum jadi</h4>
+        <h4><b>Nomor Telepon :</b>08XX-XXXX-XXXX</h4>
+        <h4><b>Email :</b>email@contoh.com</h4>
+        <!-- Bagian Kirimkan Pesan-->
+        <h1 style="text-align: center;">Kirimkan Pesan</h1>
+        <!-- Isi Nama-->
+        <label for="nama">Nama</label>
+        <input type="text" id="nama"><br>
+        <br>
+        <!-- Isi Email-->
+        <label for="email">Email</label>
+        <input type="text" id="email"><br>
+        <br>
+        <!-- Isi Gender-->
+        <label style="float: left;">Jenis Kelamin</label>
+        <div>
+            <input type="radio" name="gender" id="submisi" style="margin-left: 48px;">Laki-laki<br>
+            <input type="radio" name="gender" id="jeniskel" style="margin-left: 145px;">Perempuan<br>
+        </div>
+        <br>
+        <!-- Isi Pesan-->
+        <label>Pesan Anda</label>
+        <textarea cols="50" row="7"></textarea>
+        <br>
+        <!-- Submisi-->
+        <br>        
+        <input type="submit" value="Kirim" id="submisi">
+    </body>
+</html>
