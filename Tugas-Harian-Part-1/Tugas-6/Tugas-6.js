@@ -1,10 +1,10 @@
 //SOAL 1
 console.log("----SOAL 1----");
-const luaslingkaran=(r)=>{
-    return 3.14*r*r;
+const luaslingkaran=(r,phi=3.14)=>{
+    return phi*r*r;
 }
-const kelilinglingkaran=(r)=>{
-    return 2*3.14*r;
+const kelilinglingkaran=(r,phi=3.14)=>{
+    return 2*phi*r;
 }
 const jari2=7;
 let luas=luaslingkaran(jari2);
