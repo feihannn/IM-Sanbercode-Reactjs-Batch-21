@@ -8,6 +8,9 @@ class Animal {
         this.cold_blooded=false;
         this.name=nama;
     }
+    set kaki(jumlah){
+        this.legs=jumlah;
+    }
 }
  
 var sheep = new Animal("shaun");
@@ -15,6 +18,8 @@ var sheep = new Animal("shaun");
 console.log(sheep.name) // "shaun"
 console.log(sheep.legs) // 4
 console.log(sheep.cold_blooded) // false
+sheep.legs=3;//mencoba set
+console.log(sheep.legs);
 //release 1
 console.log("----RELEASE 1----");
 
@@ -55,16 +60,16 @@ class Clock{
     }
     render(){
         var date = new Date();
-        this.hours = date.getHours();
-        this.mins = date.getMinutes();
-        this.secs = date.getSeconds();
+        var hours = date.getHours();
+        var mins = date.getMinutes();
+        var secs = date.getSeconds();
         var output = this.template
-            .replace('h', this.hours)
-            .replace('m', this.mins)
-            .replace('s', this.secs);
-        if (this.hours < 10) this.hours = '0' + this.hours;
-        if (this.mins < 10) this.mins = '0' + this.mins;
-        if (this.secs < 10) this.secs = '0' + this.secs;
+            .replace('h', hours)
+            .replace('m', mins)
+            .replace('s', secs);
+        if (hours < 10) this.hours = '0' + hours;
+        if (mins < 10) this.mins = '0' + mins;
+        if (secs < 10) this.secs = '0' + secs;
         
         console.log(output);
     }
