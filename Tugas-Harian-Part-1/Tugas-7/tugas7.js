@@ -4,12 +4,29 @@ console.log("----SOAL 1----");
 console.log("----RELEASE 0----");
 class Animal {
     constructor(nama){
-        this.legs=4;
-        this.cold_blooded=false;
-        this.name=nama;
+        this._legs=4;
+        this._coldBlooded=false;
+        this._name=nama;
     }
-    set kaki(jumlah){
-        this.legs=jumlah;
+    //get
+    get name(){
+        return this._name;
+    }
+    get legs(){
+        return this._legs;
+    }
+    get cold_blooded(){
+        return this._coldBlooded;
+    }
+    //set
+    set legs(x){
+        this._legs=x;
+    }
+    set name(x){
+        this._name=x;
+    }
+    set cold_blooded(x){
+        this._coldBlooded=x;
     }
 }
  
@@ -26,7 +43,7 @@ console.log("----RELEASE 1----");
 class Ape extends Animal{
     constructor(nama){
         super(nama);
-        this.legs=2;
+        this._legs=2;
     }
     yell(){
         console.log("Auooo");
