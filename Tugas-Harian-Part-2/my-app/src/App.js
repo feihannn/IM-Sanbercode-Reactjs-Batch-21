@@ -7,11 +7,11 @@ function App() {
       <h1 style={{textAlign:"left",marginLeft:"75px"}}> Form Pembelian Buah</h1>
       <table>
         <tr>
-          <td><h5>Nama Pelanggan</h5></td>
-          <td><input type="text" style={{marginLeft:"20px"}}></input></td>
+          <td><h5 style={{marginLeft:"15px"}}>Nama Pelanggan</h5></td>
+          <td><input type="text" style={{marginLeft:"20px",border:"0.5px solid black",backgroundColor:"white"}}></input></td>
         </tr>
         <tr>
-          <td><h5>Daftar Item</h5></td>
+          <td><h5 style={{textAlign:"left",marginTop:"84px",marginLeft:"15px"}}>Daftar Item</h5></td>
           <form>
             <td>
               <input type ="checkbox" name="Semangka" value="Semangka" style={{marginLeft:"20px"}}></input>
@@ -33,7 +33,7 @@ function App() {
           </form>
         </tr>
         <tr>
-          <td><input type="submit" value="Kirim" ></input></td>
+          <td><input type="submit" value="Kirim" style={{border:"2px solid black",backgroundColor:"white",borderRadius:"10px",marginLeft:"-55px"}}></input></td>
         </tr>
       </table>
 
