@@ -36,9 +36,9 @@ let dataHargaBuah = [
       return(
         <>
           <tr style={{lineHeight:"15px"}}>
-            <td style={{backgroundColor:"grey",width:"500px"}}><h5 style={{marginTop:"2px",marginBottom:"2px"}}>Nama</h5></td>
-            <td style={{backgroundColor:"grey",width:"250px"}}><h5 style={{marginTop:"2px",marginBottom:"2px"}}>Harga</h5></td>
-            <td style={{backgroundColor:"grey",width:"250px"}}><h5 style={{marginTop:"2px",marginBottom:"2px"}}>Berat</h5></td>
+            <td style={{backgroundColor:"grey",width:"250px"}}><h5 style={{marginTop:"2px",marginBottom:"2px"}}>Nama</h5></td>
+            <td style={{backgroundColor:"grey",width:"125px"}}><h5 style={{marginTop:"2px",marginBottom:"2px"}}>Harga</h5></td>
+            <td style={{backgroundColor:"grey",width:"125px"}}><h5 style={{marginTop:"2px",marginBottom:"2px"}}>Berat</h5></td>
           </tr>
         </>
       )
@@ -65,8 +65,8 @@ let dataHargaBuah = [
       render(){
           return(
               <>
-              <h1 style={{marginLeft:"300px",textAlign:"left",fontSize:"50px",fontFamily:"Times New Roman"}}>Tabel Harga Buah</h1>
-            <table style={{border:"2px solid black"}}>
+              <h1 style={{marginLeft:"0px",textAlign:"center",fontSize:"50px",fontFamily:"Times New Roman"}}>Daftar Harga Buah</h1>
+            <table style={{border:"2px solid black",textAlign:"center",marginLeft:"auto",marginRight:"auto"}}>
                 <Header/>
                 <DaftarBuah/>
             </table>
