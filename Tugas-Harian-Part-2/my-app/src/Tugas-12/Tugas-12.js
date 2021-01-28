@@ -20,13 +20,16 @@ class TunjukkanList extends React.Component{
             buah:dataHargaBuah,
             namabaru:'',
             hargabaru:'',
-            beratbaru:''
+            beratbaru:'',
+            indexganti:-1
             
         }
         this.handleChangeNama=this.handleChangeNama.bind(this);
         this.handleChangeBerat=this.handleChangeBerat.bind(this);
         this.handleChangeHarga=this.handleChangeHarga.bind(this);
         this.handleSubmit=this.handleSubmit.bind(this);
+        this.handleChangeBaris=this.handleChangeBaris.bind(this);
+        this.handleDeleteBaris=this.handleDeleteBaris.bind(this);
     }
     handleChangeNama(event){
         this.setState({namabaru:event.target.value});
@@ -40,12 +43,41 @@ class TunjukkanList extends React.Component{
 
     handleSubmit(event){
         event.preventDefault()
+        if (this.state.indexganti===-1){
+            this.setState({
+                buah:[...this.state.buah,{nama:this.state.namabaru,harga:this.state.hargabaru,berat:this.state.beratbaru/1000}],
+                namabaru:'',
+                hargabaru:'',
+                beratbaru:''
+            })
+        }
+        else{
+            this.state.buah[this.state.indexganti]={nama:this.state.namabaru,harga:this.state.hargabaru,berat:this.state.beratbaru}
+        }
+        
+    }
+    handleChangeBaris(event){
+        let index=event.target.value
+        let databuah=this.state.buah[index]
         this.setState({
-            buah:[...this.state.buah,{nama:this.state.namabaru,harga:this.state.hargabaru,berat:this.state.beratbaru/1000}],
-            namabaru:'',
-            hargabaru:'',
-            beratbaru:''
+            namabaru:databuah.nama,
+            hargabaru:databuah.harga,
+            beratbaru:databuah.berat,
+            indexganti:index
         })
+
+    }
+    handleDeleteBaris(event){
+        let index=event.target.value
+        let buahlagi=this.state.buah
+        let editbuah=buahlagi[this.state.indexganti]
+        buahlagi.splice(index,1)
+        if (editbuah!==undefined){
+            var indexbaru=buahlagi.findIndex((el)=>el===editbuah)
+            this.setState({buah:buahlagi,indexganti:indexbaru})
+        }else{
+            this.setState({buah:buahlagi})
+        }
     }
     render(){
         return(
@@ -72,7 +104,7 @@ class TunjukkanList extends React.Component{
                                     <td>{val.berat} kg</td>
                                     <td>
                                            <button onClick={this.handleChangeBaris} value={index}>Edit</button>
-                                            <button>Delete</button>
+                                            <button onClick={this.handleDeleteBaris} value={index}>Delete</button>
                                     </td>
                                 </tr>
                             )
