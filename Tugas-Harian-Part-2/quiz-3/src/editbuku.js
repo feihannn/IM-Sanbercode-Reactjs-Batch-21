@@ -154,7 +154,7 @@ const handleDelete = (event) => {
                     <td>{item.release_year}</td>
                     <td>{item.totalPage}</td>
                     <td>{item.price}</td>
-                    <td>{item.image_url}</td>
+                  
                     <td>
                       <button onClick={handleEdit} value={item.id}>Edit</button>
                       &nbsp;
